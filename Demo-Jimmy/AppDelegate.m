@@ -18,8 +18,19 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    CusTabBarController *tabbar=[[CusTabBarController alloc]init];
-    self.window.rootViewController=tabbar;
+    
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"]) {
+//        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstLaunch"];
+        NSLog(@"首次启动");
+        GuidePageVC *vc = [[GuidePageVC alloc] init];
+        self.window.rootViewController = vc;
+    }else {
+        NSLog(@"非首次启动");
+        CusTabBarController *tabbar=[[CusTabBarController alloc]init];
+        self.window.rootViewController=tabbar;
+    }
+    
+    
     
     
     return YES;
