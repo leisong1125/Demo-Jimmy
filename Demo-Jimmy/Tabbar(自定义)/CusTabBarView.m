@@ -110,7 +110,9 @@
 
 - (void)plusClick:(UIButton *)sender
 {
-    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(plusBtnClick)]) {
+        [self.delegate plusBtnClick];
+    }
 }
 
 

@@ -33,15 +33,6 @@
         [self addControllerWithClass:discover title:@"发现" image:@"tabbar_discover" selectedImage:@"tabbar_discover_selected"];
         MineVC *profile = [[MineVC alloc] init];
         [self addControllerWithClass:profile title:@"我" image:@"tabbar_profile" selectedImage:@"tabbar_profile_selected"];
-        
-        
-//        UINavigationController * homeNavi = [[UINavigationController alloc] initWithRootViewController:home];
-//        
-//        UINavigationController * messageNavi = [[UINavigationController alloc] initWithRootViewController:message];
-//        UINavigationController * discoverNavi = [[UINavigationController alloc] initWithRootViewController:discover];
-//        UINavigationController * profileNavi = [[UINavigationController alloc] initWithRootViewController:profile];
-//        
-//        self.viewControllers=@[homeNavi,messageNavi,discoverNavi,profileNavi];
     }
     return self;
 }
@@ -74,6 +65,12 @@
     
 }
 
+-(void)plusBtnClick
+{
+    OtherVC * otherVC = [[OtherVC alloc] init];
+    [self presentViewController:otherVC animated:YES completion:nil];
+//    self.selectedViewController = otherVC;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

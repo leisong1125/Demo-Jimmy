@@ -52,6 +52,7 @@
 		9F393FCE1DED88D6000BAC31 /* run7.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F393FB31DED88D6000BAC31 /* run7.png */; };
 		9F393FCF1DED88D6000BAC31 /* run8.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F393FB41DED88D6000BAC31 /* run8.png */; };
 		9F393FD01DED88D6000BAC31 /* run9.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F393FB51DED88D6000BAC31 /* run9.png */; };
+		BFB3CD401DEDC7960099587A /* OtherVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB3CD3F1DEDC7960099587A /* OtherVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +139,8 @@
 		9F393FB41DED88D6000BAC31 /* run8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = run8.png; sourceTree = "<group>"; };
 		9F393FB51DED88D6000BAC31 /* run9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = run9.png; sourceTree = "<group>"; };
 		B84EEC9D9E7054D7D6D9B836 /* libPods-Demo-Jimmy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo-Jimmy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFB3CD3E1DEDC7960099587A /* OtherVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherVC.h; sourceTree = "<group>"; };
+		BFB3CD3F1DEDC7960099587A /* OtherVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +283,7 @@
 		9F393F781DED5FA2000BAC31 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				BFB3CD3D1DEDC7600099587A /* 其他 */,
 				9F393F7E1DED608E000BAC31 /* 我的 */,
 				9F393F7D1DED6089000BAC31 /* 发现 */,
 				9F393F7C1DED6063000BAC31 /* 消息 */,
@@ -404,6 +408,15 @@
 				93B74AFC412C404F8BF22814 /* Pods-Demo-Jimmy.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		BFB3CD3D1DEDC7600099587A /* 其他 */ = {
+			isa = PBXGroup;
+			children = (
+				BFB3CD3E1DEDC7960099587A /* OtherVC.h */,
+				BFB3CD3F1DEDC7960099587A /* OtherVC.m */,
+			);
+			path = "其他";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -631,6 +644,7 @@
 				9F393F8A1DED60F3000BAC31 /* MineVC.m in Sources */,
 				9F393F8D1DED6320000BAC31 /* CusTabBarView.m in Sources */,
 				9F393F771DED5E23000BAC31 /* CusTabBarController.m in Sources */,
+				BFB3CD401DEDC7960099587A /* OtherVC.m in Sources */,
 				9F393F871DED60E7000BAC31 /* FoundVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

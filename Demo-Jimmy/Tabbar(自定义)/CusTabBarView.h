@@ -13,6 +13,8 @@
 
 -(void)tabbar:(CusTabBarView *)tabBar selectBtnFrom:(NSInteger)from to:(NSInteger)to;
 
+-(void)plusBtnClick;
+
 @end
 
 @interface CusTabBarView : UIView

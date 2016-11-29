@@ -20,7 +20,7 @@
     
     
     if(![[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"]) {
-//        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstLaunch"];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstLaunch"];
         NSLog(@"首次启动");
         GuidePageVC *vc = [[GuidePageVC alloc] init];
         self.window.rootViewController = vc;
