@@ -17,6 +17,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    CusTabBarController *tabbar=[[CusTabBarController alloc]init];
+    self.window.rootViewController=tabbar;
+    
+    
     return YES;
 }
 

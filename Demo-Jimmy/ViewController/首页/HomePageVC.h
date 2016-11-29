@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  HomePageVC.h
 //  Demo-Jimmy
 //
-//  Created by Lenwave on 16/11/28.
+//  Created by Lenwave on 16/11/29.
 //  Copyright © 2016年 family. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface HomePageVC : UIViewController
 
 @end
-
