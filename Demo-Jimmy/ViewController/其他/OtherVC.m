@@ -17,11 +17,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UINavigationController * navi = [[UINavigationController alloc] initWithRootViewController:self];
+    
+    UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.backgroundColor = [UIColor redColor];
+    btn.frame = CGRectMake(100, 100, 100, 100);
+    [btn addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:btn];
     
     self.view.backgroundColor = [UIColor whiteColor];
 //    self.view.alpha = .3;
     
 }
+
+- (void)click
+{
+    UIViewController * vC = [[UIViewController alloc] init];
+    
+    [self.navigationController pushViewController:vC animated:YES];
+}
+
 
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event

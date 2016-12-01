@@ -8,9 +8,11 @@
 
 #import "CusTabBarController.h"
 
-@interface CusTabBarController ()<CusTabBarViewDelegate>
+@interface CusTabBarController ()<CusTabBarViewDelegate,HyPopMenuViewDelegate>
 
 @property(nonatomic,strong)CusTabBarView *tabBtn2;
+
+@property (nonatomic, strong) HyPopMenuView* menu;
 
 @end
 
@@ -33,9 +35,68 @@
         [self addControllerWithClass:discover title:@"发现" image:@"tabbar_discover" selectedImage:@"tabbar_discover_selected"];
         MineVC *profile = [[MineVC alloc] init];
         [self addControllerWithClass:profile title:@"我" image:@"tabbar_profile" selectedImage:@"tabbar_profile_selected"];
+        [self pop];
     }
     return self;
 }
+
+- (void)pop
+{
+    _menu = [HyPopMenuView sharedPopMenuManager];
+    PopMenuModel* model = [PopMenuModel
+                           allocPopMenuModelWithImageNameString:@"tabbar_compose_idea"
+                           AtTitleString:@"文字/头条"
+                           AtTextColor:[UIColor grayColor]
+                           AtTransitionType:PopMenuTransitionTypeCustomizeApi
+                           AtTransitionRenderingColor:nil];
+    
+    PopMenuModel* model1 = [PopMenuModel
+                            allocPopMenuModelWithImageNameString:@"tabbar_compose_photo"
+                            AtTitleString:@"相册/视频"
+                            AtTextColor:[UIColor grayColor]
+                            AtTransitionType:PopMenuTransitionTypeSystemApi
+                            AtTransitionRenderingColor:nil];
+    
+    PopMenuModel* model2 = [PopMenuModel
+                            allocPopMenuModelWithImageNameString:@"tabbar_compose_camera"
+                            AtTitleString:@"拍摄/短视频"
+                            AtTextColor:[UIColor grayColor]
+                            AtTransitionType:PopMenuTransitionTypeCustomizeApi
+                            AtTransitionRenderingColor:nil];
+    
+    PopMenuModel* model3 = [PopMenuModel
+                            allocPopMenuModelWithImageNameString:@"tabbar_compose_lbs"
+                            AtTitleString:@"签到"
+                            AtTextColor:[UIColor grayColor]
+                            AtTransitionType:PopMenuTransitionTypeSystemApi
+                            AtTransitionRenderingColor:nil];
+    
+    PopMenuModel* model4 = [PopMenuModel
+                            allocPopMenuModelWithImageNameString:@"tabbar_compose_review"
+                            AtTitleString:@"点评"
+                            AtTextColor:[UIColor grayColor]
+                            AtTransitionType:PopMenuTransitionTypeCustomizeApi
+                            AtTransitionRenderingColor:nil];
+    
+    PopMenuModel* model5 = [PopMenuModel
+                            allocPopMenuModelWithImageNameString:@"tabbar_compose_more"
+                            AtTitleString:@"更多"
+                            AtTextColor:[UIColor grayColor]
+                            AtTransitionType:PopMenuTransitionTypeSystemApi
+                            AtTransitionRenderingColor:nil];
+    
+    _menu.dataSource = @[ model, model1, model2, model3, model4, model5 ];
+    _menu.delegate = self;
+    _menu.popMenuSpeed = 12.0f;
+    _menu.automaticIdentificationColor = false;
+    _menu.animationType = HyPopMenuViewAnimationTypeViscous;
+    
+    popMenvTopView* topView = [popMenvTopView popMenvTopView];
+    topView.frame = CGRectMake(0, 44, CGRectGetWidth(self.view.frame), 92);
+    _menu.topView = topView;
+
+}
+
 
 
 -(void)addControllerWithClass:(UIViewController*)vc title:(NSString *)title image:(NSString *)ImageName selectedImage:(NSString  *)selectImg{
@@ -67,9 +128,17 @@
 
 -(void)plusBtnClick
 {
+    _menu.backgroundType = HyPopMenuViewBackgroundTypeLightBlur;
+    [_menu openMenu];
+}
+
+
+- (void)popMenuView:(HyPopMenuView*)popMenuView didSelectItemAtIndex:(NSUInteger)index
+{
     OtherVC * otherVC = [[OtherVC alloc] init];
+    otherVC.modalPresentationStyle = UIModalPresentationPopover;
+
     [self presentViewController:otherVC animated:YES completion:nil];
-//    self.selectedViewController = otherVC;
 }
 
 - (void)viewDidLoad {

@@ -53,6 +53,12 @@
 		9F393FCF1DED88D6000BAC31 /* run8.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F393FB41DED88D6000BAC31 /* run8.png */; };
 		9F393FD01DED88D6000BAC31 /* run9.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F393FB51DED88D6000BAC31 /* run9.png */; };
 		BFB3CD401DEDC7960099587A /* OtherVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB3CD3F1DEDC7960099587A /* OtherVC.m */; };
+		BFE84D991DF05B8700C53AFF /* HyPopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE84D911DF05B8700C53AFF /* HyPopMenuView.m */; };
+		BFE84D9A1DF05B8700C53AFF /* PopMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE84D941DF05B8700C53AFF /* PopMenuButton.m */; };
+		BFE84D9B1DF05B8700C53AFF /* PopMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE84D961DF05B8700C53AFF /* PopMenuModel.m */; };
+		BFE84D9C1DF05B8700C53AFF /* UIColor+ImageGetColor.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE84D981DF05B8700C53AFF /* UIColor+ImageGetColor.m */; };
+		BFE84DA11DF05C7700C53AFF /* popMenvTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE84D9F1DF05C7700C53AFF /* popMenvTopView.m */; };
+		BFE84DA21DF05C7700C53AFF /* popMenvTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE84DA01DF05C7700C53AFF /* popMenvTopView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +147,18 @@
 		B84EEC9D9E7054D7D6D9B836 /* libPods-Demo-Jimmy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo-Jimmy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB3CD3E1DEDC7960099587A /* OtherVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherVC.h; sourceTree = "<group>"; };
 		BFB3CD3F1DEDC7960099587A /* OtherVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherVC.m; sourceTree = "<group>"; };
+		BFE84D901DF05B8700C53AFF /* HyPopMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyPopMenuView.h; sourceTree = "<group>"; };
+		BFE84D911DF05B8700C53AFF /* HyPopMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyPopMenuView.m; sourceTree = "<group>"; };
+		BFE84D921DF05B8700C53AFF /* HyPopMenuViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyPopMenuViewDelegate.h; sourceTree = "<group>"; };
+		BFE84D931DF05B8700C53AFF /* PopMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopMenuButton.h; sourceTree = "<group>"; };
+		BFE84D941DF05B8700C53AFF /* PopMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopMenuButton.m; sourceTree = "<group>"; };
+		BFE84D951DF05B8700C53AFF /* PopMenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopMenuModel.h; sourceTree = "<group>"; };
+		BFE84D961DF05B8700C53AFF /* PopMenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopMenuModel.m; sourceTree = "<group>"; };
+		BFE84D971DF05B8700C53AFF /* UIColor+ImageGetColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ImageGetColor.h"; sourceTree = "<group>"; };
+		BFE84D981DF05B8700C53AFF /* UIColor+ImageGetColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ImageGetColor.m"; sourceTree = "<group>"; };
+		BFE84D9E1DF05C7700C53AFF /* popMenvTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = popMenvTopView.h; sourceTree = "<group>"; };
+		BFE84D9F1DF05C7700C53AFF /* popMenvTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = popMenvTopView.m; sourceTree = "<group>"; };
+		BFE84DA01DF05C7700C53AFF /* popMenvTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = popMenvTopView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +220,7 @@
 		9F2853831DEC541700499ED5 /* Demo-Jimmy */ = {
 			isa = PBXGroup;
 			children = (
+				BFE84D8F1DF05B3200C53AFF /* CusPop(新浪弹出) */,
 				9F393F981DED88A3000BAC31 /* Resources(资源) */,
 				9F393F941DED6A9C000BAC31 /* Category(类别) */,
 				9F393F7A1DED5FE4000BAC31 /* View */,
@@ -419,6 +438,33 @@
 			path = "其他";
 			sourceTree = "<group>";
 		};
+		BFE84D8F1DF05B3200C53AFF /* CusPop(新浪弹出) */ = {
+			isa = PBXGroup;
+			children = (
+				BFE84D9D1DF05C4900C53AFF /* View */,
+				BFE84D901DF05B8700C53AFF /* HyPopMenuView.h */,
+				BFE84D911DF05B8700C53AFF /* HyPopMenuView.m */,
+				BFE84D921DF05B8700C53AFF /* HyPopMenuViewDelegate.h */,
+				BFE84D931DF05B8700C53AFF /* PopMenuButton.h */,
+				BFE84D941DF05B8700C53AFF /* PopMenuButton.m */,
+				BFE84D951DF05B8700C53AFF /* PopMenuModel.h */,
+				BFE84D961DF05B8700C53AFF /* PopMenuModel.m */,
+				BFE84D971DF05B8700C53AFF /* UIColor+ImageGetColor.h */,
+				BFE84D981DF05B8700C53AFF /* UIColor+ImageGetColor.m */,
+			);
+			path = "CusPop(新浪弹出)";
+			sourceTree = "<group>";
+		};
+		BFE84D9D1DF05C4900C53AFF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BFE84D9E1DF05C7700C53AFF /* popMenvTopView.h */,
+				BFE84D9F1DF05C7700C53AFF /* popMenvTopView.m */,
+				BFE84DA01DF05C7700C53AFF /* popMenvTopView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -560,6 +606,7 @@
 				9F2853911DEC541700499ED5 /* Assets.xcassets in Resources */,
 				9F28538F1DEC541700499ED5 /* Main.storyboard in Resources */,
 				9F393FCF1DED88D6000BAC31 /* run8.png in Resources */,
+				BFE84DA21DF05C7700C53AFF /* popMenvTopView.xib in Resources */,
 				9F393FCE1DED88D6000BAC31 /* run7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -633,18 +680,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFE84D991DF05B8700C53AFF /* HyPopMenuView.m in Sources */,
 				9F393F971DED6B11000BAC31 /* UIView+Frame.m in Sources */,
 				9F393F721DED5A00000BAC31 /* GuidePageVC.m in Sources */,
 				9F2853891DEC541700499ED5 /* AppDelegate.m in Sources */,
 				9F393F811DED60CA000BAC31 /* HomePageVC.m in Sources */,
+				BFE84D9A1DF05B8700C53AFF /* PopMenuButton.m in Sources */,
 				9F393F931DED672A000BAC31 /* CusTabBar.m in Sources */,
+				BFE84D9C1DF05B8700C53AFF /* UIColor+ImageGetColor.m in Sources */,
 				9F393F841DED60DA000BAC31 /* NewsVC.m in Sources */,
 				9F393F901DED6708000BAC31 /* CusTabBarBtn.m in Sources */,
+				BFE84DA11DF05C7700C53AFF /* popMenvTopView.m in Sources */,
 				9F2853861DEC541700499ED5 /* main.m in Sources */,
 				9F393F8A1DED60F3000BAC31 /* MineVC.m in Sources */,
 				9F393F8D1DED6320000BAC31 /* CusTabBarView.m in Sources */,
 				9F393F771DED5E23000BAC31 /* CusTabBarController.m in Sources */,
 				BFB3CD401DEDC7960099587A /* OtherVC.m in Sources */,
+				BFE84D9B1DF05B8700C53AFF /* PopMenuModel.m in Sources */,
 				9F393F871DED60E7000BAC31 /* FoundVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
